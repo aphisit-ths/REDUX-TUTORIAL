@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { IAllSemester, IInputdata } from '../state-types';
 
 const semesterInitState: IAllSemester = {
-  data: [{ semester: 0, subjects: [] }],
+  data: [],
   error: null,
 };
 

@@ -8,6 +8,7 @@ export enum ESubjectType {
   HUMEN = 'HUMEN',
   MATHSCI = 'MATHSCI',
   SOCIETY = 'SOCIETY',
+  FREE = 'FREE',
 }
 
 export type TypeOfSubject =
@@ -25,7 +26,7 @@ export interface ISubject {
   id: string;
   name: string;
   credit: number;
-  type: TypeOfSubject;
+  type: string;
 }
 
 export interface ISemester {
