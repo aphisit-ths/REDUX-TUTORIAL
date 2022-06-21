@@ -6,7 +6,7 @@ import { useTypedSelector } from "../hooks/useTypedSelector";
 import { RootState } from "../state";
 
 export const RepositoriesList: React.FC = () => {
-  
+
   const { searchRepositories } = useAction();
   const [term, setTerm] = useState("")
   const { data, error, loading } = useTypedSelector((state: RootState) => state.reducer.repositories)

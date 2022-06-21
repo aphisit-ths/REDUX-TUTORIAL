@@ -40,10 +40,9 @@ const ReduxToolkits: React.FC = () => {
     setcredit(3)
     settype("")
   }
-
-
   return (
     <div style={{ display: 'flex', justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+      <h1>hi form new folder</h1>
       <form onSubmit={onSubmit} style={{ display: 'flex', justifyContent: "center", alignItems: "start", flexDirection: "column", gap: "10px" }} >
         <div>
           <label >รหัส</label>
