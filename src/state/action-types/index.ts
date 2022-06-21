@@ -4,7 +4,3 @@ export enum ActionType {
   SEARCH_REPOSITORIES_ERROR = 'search_repositories_error',
 }
 
-export enum ECreditCheckerActionType {
-  ADD_SUBJECT = 'add_subject',
-  DELETE_SUBJECT = 'add_subject',
-}
