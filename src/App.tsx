@@ -1,14 +1,24 @@
-import { Provider } from "react-redux";
-import { store } from "./state";
-import ReduxToolkits from "./components/ReduxToolkits";
+
+
+import OverviewPage from "./components/overview/OverviewPage";
+import { useDispatch } from "react-redux";
+import { updateByType } from "./state/reducers/checker";
+import { AmountByType } from "./components/overview/credit-amout";
+import React, { useState } from "react";
+import { InputForm } from "./components/overview/inputform";
+import "./App.scss"
 function App() {
+  const [toggle, setToggle] = useState(false)
+
+  const dispatch = useDispatch()
+  dispatch(updateByType())
   return (
-    <Provider store={store}>
-      <div>
-        <h1>Search dude</h1>
-        <ReduxToolkits />
-      </div>
-    </Provider>
+    <div className="App">
+      <button onClick={() => setToggle(true)}>Add subject</button>
+      {toggle && <InputForm setToggle={setToggle} />}
+      <OverviewPage />
+      <AmountByType />
+    </div>
 
   );
 }

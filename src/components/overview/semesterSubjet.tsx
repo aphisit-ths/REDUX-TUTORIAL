@@ -1,5 +1,5 @@
 import React from 'react'
-import { ISemester, ISubject } from "../state/state-types"
+import { ISemester, ISubject } from "../../state/state-types"
 
 interface ISemesterPage {
   semester: number
@@ -8,14 +8,20 @@ interface ISemesterPage {
 export const SemesterPage: React.FC<ISemesterPage> = ({ semester, subjects }) => {
 
   return (
-    <div>
+    <div key={semester}>
       <h1>Semester :{semester}</h1>
       {subjects.map((subject, i) => (
         <>
-          <ul>
-            <li>{subject.id}</li>
+          <ul key={i}>
+            <li>id:{subject.id}</li>
             <li>
-              {subject.name}
+              name:{subject.name}
+            </li>
+            <li>
+              type:{subject.type}
+            </li>
+            <li>
+              credit:{subject.credit}
             </li>
           </ul>
 

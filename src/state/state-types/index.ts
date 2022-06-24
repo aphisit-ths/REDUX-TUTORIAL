@@ -39,7 +39,12 @@ export interface IAllSemester {
   error: string | null;
 }
 
-export interface IInputdata {
+export interface PayloadType {
   semester: number;
-  subject: ISubject;
+  subject: {
+    id: string;
+    name: string;
+    credit: number;
+    type: string;
+  };
 }

@@ -1,0 +1,123 @@
+.hero-card {
+  height: 500px;
+  width: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 18px;
+  background: #354259;
+  align-items: center;
+  .content-slider {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    .roadmap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+      p {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #ffff;
+      }
+    }
+    .slider-wrapper {
+      width: 100%;
+      background: #fff;
+      border-radius: 20px;
+      height: 12px;
+      .slider {
+        height: 100%;
+        background: #fef385;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .marker {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          background: #fef385;
+          right: 0;
+          top: 50;
+        }
+      }
+    }
+  }
+  .content-text {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .hero-section {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      margin-left: 10%;
+      .hero-score {
+        h1 {
+          font-size: 250px;
+          font-weight: 700;
+          letter-spacing: 0em;
+          text-align: left;
+          color: #ffff;
+          line-height: 210px;
+        }
+        p {
+          color: #fff;
+          font-size: 28px;
+          font-weight: 300;
+          text-align: left;
+          word-spacing: 2px;
+
+          span {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .hero-status {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .status-warper {
+        height: 87px;
+        width: 273px;
+        background-color: #fff;
+        border-radius: 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 20px;
+        align-items: center;
+        .marker {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          background: #000;
+          margin-left: 20px;
+        }
+        .status-text {
+          font-size: 28px;
+          font-weight: 500;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
