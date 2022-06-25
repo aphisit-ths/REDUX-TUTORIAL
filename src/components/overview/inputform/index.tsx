@@ -11,6 +11,7 @@ import { updateByType } from '../../../state/reducers/checker'
 interface toggle {
   setToggle: any
 }
+
 export const InputForm: React.FC<toggle> = ({ setToggle }) => {
   const dispatch = useDispatch()
   const { register, formState: { errors }, handleSubmit, control, reset } = useForm<any>();
@@ -105,4 +106,5 @@ const subjecttype = [
   { value: ESubjectType.HUMEN, label: ESubjectType.HUMEN },
   { value: ESubjectType.MAIN, label: ESubjectType.MAIN },
   { value: ESubjectType.SOCIETY, label: ESubjectType.SOCIETY },
+  { value: ESubjectType.CEINTERREST, label: ESubjectType.CEINTERREST },
 ]

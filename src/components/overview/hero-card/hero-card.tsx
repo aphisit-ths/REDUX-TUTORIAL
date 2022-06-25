@@ -2,13 +2,9 @@ import React, { useEffect, useState } from "react"
 import "./hero-card.scss"
 import { RootState } from "../../../state"
 import { useSelector, useDispatch } from "react-redux"
-import { updateByType } from "../../../state/reducers/checker"
 
 export const HeroCard: React.FC = () => {
   const { data, error } = useSelector((state: RootState) => state.semester)
-
-  const checker = useSelector((state: RootState) => state.checker)
-  const dispatch = useDispatch()
   const [sumOfCredit, setsumOfCredit] = useState<number>(0)
   const amountCredit = (): number => {
     var arr: number[] = []

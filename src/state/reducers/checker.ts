@@ -14,6 +14,7 @@ export interface IGroupSubjectByType {
   NETWORK: ISubject[];
   HARDWARE: ISubject[];
   PROJECT: ISubject[];
+  CEINTERREST: ISubject[];
   ENGLISH: ISubject[];
   HUMEN: ISubject[];
   MATHSCI: ISubject[];
@@ -26,6 +27,7 @@ const initialState: IGroupSubjectByType = {
   NETWORK: [],
   HARDWARE: [],
   PROJECT: [],
+  CEINTERREST: [],
   ENGLISH: [],
   HUMEN: [],
   MATHSCI: [],

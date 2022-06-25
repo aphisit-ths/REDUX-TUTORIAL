@@ -9,6 +9,7 @@ export enum ESubjectType {
   MATHSCI = 'MATHSCI',
   SOCIETY = 'SOCIETY',
   FREE = 'FREE',
+  CEINTERREST = 'CEINTERREST',
 }
 
 export type TypeOfSubject =
@@ -20,7 +21,8 @@ export type TypeOfSubject =
   | ESubjectType.ENGLISH
   | ESubjectType.HUMEN
   | ESubjectType.MATHSCI
-  | ESubjectType.SOCIETY;
+  | ESubjectType.SOCIETY
+  | ESubjectType.CEINTERREST;
 
 export interface ISubject {
   id: string;
