@@ -1,13 +1,14 @@
 # จะจบยัง ?
-เอาไว้วางแผนการเรียนของตัวเอง กับฝึกใช้ typescript , redux
+เอาไว้วางแผนการเรียนของตัวเอง และดูว่าจะไกล้จะจบยัง กับฝึกใช้ typescript , redux
 
 ## features
-> 1. เพิ่ม/ลบ วิชา
-> 2. รวมคะแนนแต่ละหมวดวิชาว่าครบหรือยัง
+1. เพิ่ม/ลบ วิชา
+2. รวมคะแนนแต่ละหมวดวิชาว่าครบหรือยัง
+
 
 ## Stack 
-> 1. React typescript 
-> 2. redux
-> 3. LocalStorage (save your own data)
+1. React typescript 
+2. redux
+3. LocalStorage (Save your own data)
 
-## Not supported responsive
+## Not supported responsive layout
