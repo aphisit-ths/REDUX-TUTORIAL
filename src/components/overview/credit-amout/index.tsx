@@ -12,7 +12,6 @@ export const AmountByType: React.FC = () => {
   const [filter, setFilter] = useState<ToggleState>(FilterStatus.ALL)
 
   const data = useSelector((state: RootState) => state.checker)
-
   function getSumOfCredit(array: ISubject[], type: string): ICompareAmountSubject {
     const sum = array.reduce((prev, curr) => {
       return prev + curr.credit

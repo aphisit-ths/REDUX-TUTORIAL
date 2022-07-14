@@ -27,7 +27,8 @@ export const AllElements: React.FC<IProps> = ({ data }) => {
 
   return <div className="elements-wraper">
     {data.map((ele, i) => (
-      <CardElements data={ele} index={i} />
+
+      <CardElements data={ele} index={i} key={i} />
     ))}
   </div>
 }

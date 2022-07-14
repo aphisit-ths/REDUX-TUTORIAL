@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { AmountByType } from './credit-amout'
 import { HeroCard } from './hero-card/hero-card'
-import { InputForm } from './inputform'
+import Table from "../table/table";
 import { useDispatch } from 'react-redux'
-import { addSubject } from '../../state/reducers/semester'
+import { addSubject } from '../../state/reducers/semester';
 const OverviewPage: React.FC = () => {
+  const [toggle, setToggle] = useState(false)
   const dispatch = useDispatch()
 
-  const [toggle, setToggle] = useState(false)
   return (
     <div style={{ display: 'flex', paddingTop: '20px', alignItems: "center", flexDirection: "column", minHeight: "100vh" }}>
-      <button onClick={() => setToggle(true)}>Add subject</button>
-      {toggle && <InputForm setToggle={setToggle} />}
+      <button onClick={() => setToggle(!toggle)}>Show Table</button>
+      {toggle && <Table />}
       <HeroCard />
       <AmountByType />
     </div>

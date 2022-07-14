@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { IAllSemester, PayloadType } from '../state-types';
+
 const semesterInitState: IAllSemester = {
   data: [],
   error: null,
