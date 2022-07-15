@@ -1,18 +1,24 @@
 import { Provider } from "react-redux";
 import { store } from "./state";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Table from "./components/table/table";
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <Routes >
+          <Route path="/" element={<App />} />
+          <Route path="/table" element={<Table />} />
+        </Routes>
+
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );

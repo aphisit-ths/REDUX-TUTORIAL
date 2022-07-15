@@ -23,7 +23,7 @@ export const semesterSlice = createSlice({
   name: 'semester',
   initialState: initailState,
   reducers: {
-    addSubject: (state, action) => {
+    addSubject: (state: IAllSemester, action) => {
       const input: PayloadType = action.payload;
       const isAlreadySemester = state.data.findIndex((sem) => {
         return sem.semester === input.semester;

@@ -8,14 +8,11 @@ import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { updateByType } from '../../state/reducers/checker'
 import { credit, semester, subjecttype } from "./utils"
 import _ from "underscore"
+import { RowOfTable } from './RowOfTable'
 
 import "./table.scss"
 const Table: React.FC = () => {
   const dispatch = useDispatch()
-
-  const { data } = useSelector((state: RootState) => state.semester)
-  var sorted_data = _.sortBy(data, "semester")
-
   const { register, formState: { errors }, handleSubmit, control, reset } = useForm<any>();
 
   const onSubmit: SubmitHandler<any> = async (input) => {
@@ -32,82 +29,60 @@ const Table: React.FC = () => {
     await dispatch(updateByType())
     reset()
   };
+
   return (
-    <form className='table-page' onSubmit={handleSubmit(onSubmit)} >
-      <table>
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>type</th>
-            <th>semester</th>
-            <th>credit</th>
-            <th>action</th>
-          </tr>
-        </thead>
-        <tr>
-          <td>
-            <p > <input {...register("id")} className="id" /></p>
-          </td>
-          <td>
-            <p>  <input {...register("name")} className="name" /></p>
-          </td>
-          <td>
-            <p><Controller
-              name="type"
-              control={control}
-              render={({ field }) => <Select {...field} placeholder="subject type..." options={subjecttype} />}
-            /></p>
-          </td>
-          <td>
-            <Controller
-              name="semester"
-              control={control}
-              render={({ field }) => <Select {...field} placeholder="semester..." options={semester} />}
-            />
-          </td>
-          <td>
-            <p>    <Controller
-              name="credit"
-              control={control}
-              render={({ field }) => <Select {...field} placeholder="credit..." options={credit} />}
-            /></p>
-          </td>
-          <td>
-            <button type="submit">submit</button>
-          </td>
-        </tr>
-        {sorted_data.map((data, i) => (
-          <>
-            <tr>
-              <td className='semester'>semester : {data.semester}</td>
-            </tr>
-            {data.subjects.map((e, i) => (
-              <tr key={i}>
-                <td>
-                  <p >{e.id}</p>
-                </td>
-                <td>
-                  <p> {e.name}</p>
-                </td>
-                <td>
-                  <p>{e.type}</p>
-                </td>
-                <td>
-                  <p>{data.semester}</p>
-                </td>
-                <td>
-                  <p>{e.credit}</p>
-                </td>
-                <td>
-                  <p>Delelte</p>
-                </td>
-              </tr>
-            ))}
-          </>
-        ))}
-      </table>
-    </form >
+    <div className='table-page'>
+      <form className='table-wrapper' onSubmit={handleSubmit(onSubmit)} >
+        <div>
+          <h1>Courses</h1>
+          <p>course that your enroll !</p>
+        </div>
+        <div className='table'>
+          <div className='table-header'>
+            <p>id</p>
+            <p>name</p>
+            <p>credit</p>
+            <p>action</p>
+          </div>
+          {/* <div className='table-header'>
+            <td>
+              <p > <input {...register("id")} className="id" /></p>
+            </td>
+            <td>
+              <p>  <input {...register("name")} className="name" /></p>
+            </td>
+            <td>
+              <p><Controller
+                name="type"
+                control={control}
+                render={({ field }) => <Select {...field} placeholder="subject type..." options={subjecttype} />}
+              /></p>
+            </td>
+            <td>
+              <Controller
+                name="semester"
+                control={control}
+                render={({ field }) => <Select {...field} placeholder="semester..." options={semester} />}
+              />
+            </td>
+            <td>
+              <p>    <Controller
+                name="credit"
+                control={control}
+                render={({ field }) => <Select {...field} placeholder="credit..." options={credit} />}
+              /></p>
+            </td>
+            <td>
+              <button type="submit">submit</button>
+            </td>
+          </div > */}
+
+          <RowOfTable />
+
+        </div >
+      </form >
+    </div>
+
   )
 }
 
