@@ -37,7 +37,7 @@ export const AmountByType: React.FC = () => {
     <section className="amount-section">
       <div className="selector">
         <Select onChange={(e) => { setFilter(e?.value) }} options={options}></Select>
-        <Link to={"/table"}>
+        <Link to={"/jajobyang/table"}>
           <p >
             View course
           </p>
