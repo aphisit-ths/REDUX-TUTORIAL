@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Ja-job-yang/static/css/main.027ee0c2.css",
-    "main.js": "/Ja-job-yang/static/js/main.5403989f.js",
-    "static/js/787.6717ce06.chunk.js": "/Ja-job-yang/static/js/787.6717ce06.chunk.js",
-    "index.html": "/Ja-job-yang/index.html",
-    "main.027ee0c2.css.map": "/Ja-job-yang/static/css/main.027ee0c2.css.map",
-    "main.5403989f.js.map": "/Ja-job-yang/static/js/main.5403989f.js.map",
-    "787.6717ce06.chunk.js.map": "/Ja-job-yang/static/js/787.6717ce06.chunk.js.map"
+    "main.css": "/static/css/main.2da0d330.css",
+    "main.js": "/static/js/main.c10226ec.js",
+    "static/js/787.6717ce06.chunk.js": "/static/js/787.6717ce06.chunk.js",
+    "index.html": "/index.html",
+    "main.2da0d330.css.map": "/static/css/main.2da0d330.css.map",
+    "main.c10226ec.js.map": "/static/js/main.c10226ec.js.map",
+    "787.6717ce06.chunk.js.map": "/static/js/787.6717ce06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.027ee0c2.css",
-    "static/js/main.5403989f.js"
+    "static/css/main.2da0d330.css",
+    "static/js/main.c10226ec.js"
   ]
 }
