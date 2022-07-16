@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux"
 import { ISubject, RootState } from "../../../state"
-import { IAmountCredit, citeria, ICompareAmountSubject, FilterStatus, ToggleState } from "./state.interfaces"
-import { useState, useEffect } from "react"
+import { citeria, ICompareAmountSubject, FilterStatus, ToggleState } from "./state.interfaces"
+import { useState } from "react"
 import { AllElements, CompletedElements, InCompleteElements } from "./elements/elements"
+import { Link } from "react-router-dom"
 import Select from "react-select"
 import "./amount.scss"
 
@@ -36,6 +37,12 @@ export const AmountByType: React.FC = () => {
     <section className="amount-section">
       <div className="selector">
         <Select onChange={(e) => { setFilter(e?.value) }} options={options}></Select>
+        <Link to={"/table"}>
+          <p >
+            View course
+          </p>
+        </Link >
+
       </div>
       <div className="elements-section" >
         {filter === FilterStatus.ALL && <AllElements data={amountByTypes} />}
