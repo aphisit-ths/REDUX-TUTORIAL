@@ -14,10 +14,9 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes >
-          <Route path="/" element={<App />} />
-          <Route path="/table" element={<Table />} />
+          <Route path="/jajobyang" element={<App />} />
+          <Route path="jajobyang/table" element={<Table />} />
         </Routes>
-
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

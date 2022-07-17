@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { AmountByType } from './credit-amout'
 import { HeroCard } from './hero-card/hero-card'
-import Table from "../table/table";
 const OverviewPage: React.FC = () => {
-  const [toggle, setToggle] = useState(false)
 
   return (
     <div style={{ display: 'flex', paddingTop: '20px', alignItems: "center", flexDirection: "column", minHeight: "100vh" }}>

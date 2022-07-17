@@ -34,7 +34,7 @@ const Table: React.FC = () => {
     <div className='table-page'>
       <form className='table-wrapper' onSubmit={handleSubmit(onSubmit)} >
         <div>
-          <Link to={"/"} >{"< Back"}</Link >
+          <Link to={"/jajobyang"} >{"< Back"}</Link >
           <h1>Courses</h1>
           <p>course that your enroll !</p>
         </div>
